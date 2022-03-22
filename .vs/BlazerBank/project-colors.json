@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "1a75e625-22b6-4ccd-ac8e-49225b3da17a": {
+      "ProjectGuid": "1a75e625-22b6-4ccd-ac8e-49225b3da17a",
+      "DisplayName": "BlazerBank.Server",
+      "ColorIndex": 0
+    },
+    "541115e8-d7f4-4752-9005-792ce738d4f7": {
+      "ProjectGuid": "541115e8-d7f4-4752-9005-792ce738d4f7",
+      "DisplayName": "BlazerBank.Client",
+      "ColorIndex": 1
+    },
+    "2913006a-8839-4062-90e2-14aed8cd456f": {
+      "ProjectGuid": "2913006a-8839-4062-90e2-14aed8cd456f",
+      "DisplayName": "BlazerBank.Shared",
+      "ColorIndex": 2
+    },
+    "29ce2225-95db-4c64-b236-8ed741313d4d": {
+      "ProjectGuid": "29ce2225-95db-4c64-b236-8ed741313d4d",
+      "DisplayName": "BlazerBank.Domain",
+      "ColorIndex": 3
+    },
+    "06cf7dd5-d8c8-4406-827a-5f91d74d4842": {
+      "ProjectGuid": "06cf7dd5-d8c8-4406-827a-5f91d74d4842",
+      "DisplayName": "BlazerBank.Infrastructure",
+      "ColorIndex": 4
+    },
+    "8338f5cc-6211-45a6-b594-cf15a8842947": {
+      "ProjectGuid": "8338f5cc-6211-45a6-b594-cf15a8842947",
+      "DisplayName": "BlazerBank.Command",
+      "ColorIndex": 5
+    },
+    "db75c661-cc00-4460-9f0a-0b8ffd6ce712": {
+      "ProjectGuid": "db75c661-cc00-4460-9f0a-0b8ffd6ce712",
+      "DisplayName": "BlazerBank.Query",
+      "ColorIndex": 6
+    }
+  },
+  "NextColorIndex": 7
+}

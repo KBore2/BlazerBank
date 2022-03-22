@@ -1,0 +1,12 @@
+C:\Users\KBore\source\repos\BlazerBank\Shared\bin\Debug\net6.0\BlazerBank.Shared.deps.json
+C:\Users\KBore\source\repos\BlazerBank\Shared\bin\Debug\net6.0\BlazerBank.Shared.dll
+C:\Users\KBore\source\repos\BlazerBank\Shared\bin\Debug\net6.0\ref\BlazerBank.Shared.dll
+C:\Users\KBore\source\repos\BlazerBank\Shared\bin\Debug\net6.0\BlazerBank.Shared.pdb
+C:\Users\KBore\source\repos\BlazerBank\Shared\obj\Debug\net6.0\BlazerBank.Shared.csproj.AssemblyReference.cache
+C:\Users\KBore\source\repos\BlazerBank\Shared\obj\Debug\net6.0\BlazerBank.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KBore\source\repos\BlazerBank\Shared\obj\Debug\net6.0\BlazerBank.Shared.AssemblyInfoInputs.cache
+C:\Users\KBore\source\repos\BlazerBank\Shared\obj\Debug\net6.0\BlazerBank.Shared.AssemblyInfo.cs
+C:\Users\KBore\source\repos\BlazerBank\Shared\obj\Debug\net6.0\BlazerBank.Shared.csproj.CoreCompileInputs.cache
+C:\Users\KBore\source\repos\BlazerBank\Shared\obj\Debug\net6.0\BlazerBank.Shared.dll
+C:\Users\KBore\source\repos\BlazerBank\Shared\obj\Debug\net6.0\ref\BlazerBank.Shared.dll
+C:\Users\KBore\source\repos\BlazerBank\Shared\obj\Debug\net6.0\BlazerBank.Shared.pdb
