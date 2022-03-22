@@ -7,12 +7,12 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using OnlineBankMVC.Command.Transactions.Command;
-using OnlineBankMVC.Domain.Models;
-using OnlineBankMVC.Infrastructure.Data;
-using OnlineBankMVC.Query.Transactions.Query;
+using BlazerBank.Command.Transactions.Command;
+using BlazerBank.Domain.Models;
+using BlazerBank.Infrastructure.Data;
+using BlazerBank.Query.Transactions.Query;
 
-namespace OnlineBankMVC.Controllers.AddTransactionControllerr
+namespace BlazerBank.Controllers.AddTransactionControllerr
 {
     public class TransactionsController : Controller
     {

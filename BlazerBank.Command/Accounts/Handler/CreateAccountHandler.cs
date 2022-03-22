@@ -1,9 +1,9 @@
 ﻿using MediatR;
-using OnlineBankMVC.Command.Accounts.Command;
-using OnlineBankMVC.Domain.Models;
-using OnlineBankMVC.Infrastructure.Repositories;
+using BlazerBank.Command.Accounts.Command;
+using BlazerBank.Domain.Models;
+using BlazerBank.Infrastructure.Repositories;
 
-namespace OnlineBankMVC.Command.Accounts.Handler
+namespace BlazerBank.Command.Accounts.Handler
 {
     public class CreateAccountHandler : IRequestHandler<CreateAccountCommand, List<Account>>
     {

@@ -1,7 +1,7 @@
 ﻿using MediatR;
-using OnlineBankMVC.Domain.Models;
+using BlazerBank.Domain.Models;
 
-namespace OnlineBankMVC.Command.Customers.Command
+namespace BlazerBank.Command.Customers.Command
 {
     public class DeleteCustomerCommand : IRequest<List<Customer>>
     {

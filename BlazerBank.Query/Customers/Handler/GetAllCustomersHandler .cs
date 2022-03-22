@@ -1,14 +1,14 @@
 ﻿using MediatR;
-using OnlineBankMVC.Domain.Models;
-using OnlineBankMVC.Infrastructure.Repositories;
-using OnlineBankMVC.Query.Customers.Query;
+using BlazerBank.Domain.Models;
+using BlazerBank.Infrastructure.Repositories;
+using BlazerBank.Query.Customers.Query;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OnlineBankMVC.Query.Customers.Handler
+namespace BlazerBank.Query.Customers.Handler
 {
     internal class GetAllCustomersHandler: IRequestHandler<GetAllCustomersQuery, List<Customer>>
     {

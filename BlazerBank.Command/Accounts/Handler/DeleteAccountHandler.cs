@@ -1,9 +1,9 @@
 ﻿using MediatR;
-using OnlineBankMVC.Domain.Models;
-using OnlineBankMVC.Infrastructure.Repositories;
-using OnlineBankMVC.Command.Accounts.Command;
+using BlazerBank.Domain.Models;
+using BlazerBank.Infrastructure.Repositories;
+using BlazerBank.Command.Accounts.Command;
 
-namespace OnlineBankMVC.Command.Accounts.Handler
+namespace BlazerBank.Command.Accounts.Handler
 {
     public class DeleteAccountHandler:IRequestHandler<DeleteAccountCommand, List<Account>>
     {

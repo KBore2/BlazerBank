@@ -7,12 +7,12 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using OnlineBankMVC.Command.Accounts.Command;
-using OnlineBankMVC.Domain.Models;
-using OnlineBankMVC.Infrastructure.Data;
-using OnlineBankMVC.Query.Accounts.Query;
+using BlazerBank.Command.Accounts.Command;
+using BlazerBank.Domain.Models;
+using BlazerBank.Infrastructure.Data;
+using BlazerBank.Query.Accounts.Query;
 
-namespace OnlineBankMVC.Controllers.AddAccountControllerr
+namespace BlazerBank.Controllers.AddAccountControllerr
 {
     public class AccountsController : Controller
     {

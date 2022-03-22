@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using OnlineBankMVC.Domain.Models;
+using BlazerBank.Domain.Models;
 
-namespace OnlineBankMVC.Infrastructure.Data
+namespace BlazerBank.Infrastructure.Data
 {
     public partial class OnlineBankDBContext : DbContext
     {

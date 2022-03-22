@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using OnlineBankMVC.Domain.Models;
-using OnlineBankMVC.Infrastructure.Data;
+using BlazerBank.Domain.Models;
+using BlazerBank.Infrastructure.Data;
 
-namespace OnlineBankMVC.Controllers.Cards
+namespace BlazerBank.Controllers.Cards
 {
     public class CController : Controller
     {

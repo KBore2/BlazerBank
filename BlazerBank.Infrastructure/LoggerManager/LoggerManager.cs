@@ -1,12 +1,12 @@
 ﻿using NLog;
-using OnlineBankMVC.Domain.ILogger;
+using BlazerBank.Domain.ILogger;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OnlineBankMVC.Infrastructure.LoggerManager
+namespace BlazerBank.Infrastructure.LoggerManager
 {
     public class LoggerManager : ILoggerManager
     {

@@ -1,9 +1,9 @@
 ﻿using MediatR;
-using OnlineBankMVC.Command.Customers.Command;
-using OnlineBankMVC.Domain.Models;
-using OnlineBankMVC.Infrastructure.Repositories;
+using BlazerBank.Command.Customers.Command;
+using BlazerBank.Domain.Models;
+using BlazerBank.Infrastructure.Repositories;
 
-namespace OnlineBankMVC.Command.Customers.Handler
+namespace BlazerBank.Command.Customers.Handler
 {
     public class UpdateCustomerHandler : IRequestHandler<UpdateCustomerCommand, Customer>
     {

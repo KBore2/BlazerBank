@@ -1,12 +1,12 @@
 ﻿using MediatR;
-using OnlineBankMVC.Domain.Models;
+using BlazerBank.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OnlineBankMVC.Query.Cards.Query
+namespace BlazerBank.Query.Cards.Query
 {
     public class GetCardByCustomerIDQuery : IRequest<List<Card>>
     {

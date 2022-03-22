@@ -1,8 +1,8 @@
-﻿using OnlineBankMVC.Domain.Models;
+﻿using BlazerBank.Domain.Models;
 using System;
 using System.Collections.Generic;
 
-namespace OnlineBankMVC.Domain.Models
+namespace BlazerBank.Domain.Models
 {
     public partial class Account
     {

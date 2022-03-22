@@ -1,9 +1,9 @@
 ﻿using MediatR;
-using OnlineBankMVC.Command.Cards.Command;
-using OnlineBankMVC.Domain.Models;
-using OnlineBankMVC.Infrastructure.Repositories;
+using BlazerBank.Command.Cards.Command;
+using BlazerBank.Domain.Models;
+using BlazerBank.Infrastructure.Repositories;
 
-namespace OnlineBankMVC.Command.Cards.Handler
+namespace BlazerBank.Command.Cards.Handler
 {
     public class CreateCardHandler : IRequestHandler<CreateCardCommand, List<Card>>
     {

@@ -1,7 +1,7 @@
 ﻿using MediatR;
-using OnlineBankMVC.Domain.Models;
+using BlazerBank.Domain.Models;
 
-namespace OnlineBankMVC.Command.Cards.Command
+namespace BlazerBank.Command.Cards.Command
 {
     public class DeleteCardCommand : IRequest<List<Card>>
     {

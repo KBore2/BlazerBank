@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using OnlineBankMVC.Infrastructure.Data;
+using BlazerBank.Infrastructure.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +9,12 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OnlineBankMVC.Domain.IRepositories
+namespace BlazerBank.Domain.IRepositories
 {
     public class BaseRepository<TEntity> : IAsyncRepository<TEntity> where TEntity : class
     {
         protected readonly DbSet<TEntity> dbset;
-        protected readonly OnlineBankDBContext context;
+        protected readonly OnlineBankContext context;
         public BaseRepository(OnlineBankDBContext context)
         {
             this.context = context;

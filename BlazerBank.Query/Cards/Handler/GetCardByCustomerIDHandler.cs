@@ -1,7 +1,7 @@
 ﻿using MediatR;
-using OnlineBankMVC.Domain.Models;
-using OnlineBankMVC.Infrastructure.Repositories;
-using OnlineBankMVC.Query.Cards.Query;
+using BlazerBank.Domain.Models;
+using BlazerBank.Infrastructure.Repositories;
+using BlazerBank.Query.Cards.Query;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace OnlineBankMVC.Query.Cards.Handler
+namespace BlazerBank.Query.Cards.Handler
 {
     internal class GetCardByCustomerIDHandler: IRequestHandler<GetCardByCustomerIDQuery, List<Card>>
     {

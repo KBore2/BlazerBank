@@ -1,4 +1,4 @@
-namespace OnlineBankMVC.Domain.Models
+namespace BlazerBank.Domain.Models
 {
     public class ErrorViewModel
     {

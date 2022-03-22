@@ -1,12 +1,12 @@
 ﻿using MediatR;
-using OnlineBankMVC.Domain.Models;
+using BlazerBank.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OnlineBankMVC.Query.Customers.Query
+namespace BlazerBank.Query.Customers.Query
 {
     public class GetAllCustomersQuery : IRequest<List<Customer>>
     {

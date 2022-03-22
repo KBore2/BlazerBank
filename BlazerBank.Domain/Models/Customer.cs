@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace OnlineBankMVC.Domain.Models
+namespace BlazerBank.Domain.Models
 {
     public partial class Customer
     {

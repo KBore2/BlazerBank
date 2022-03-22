@@ -7,12 +7,12 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using OnlineBankMVC.Command.Cards.Command;
-using OnlineBankMVC.Domain.Models;
-using OnlineBankMVC.Infrastructure.Data;
-using OnlineBankMVC.Query.Cards.Query;
+using BlazerBank.Command.Cards.Command;
+using BlazerBank.Domain.Models;
+using BlazerBank.Infrastructure.Data;
+using BlazerBank.Query.Cards.Query;
 
-namespace OnlineBankMVC.Controllers.AddCardControllerr
+namespace BlazerBank.Controllers.AddCardControllerr
 {
     public class CardsController : Controller
     {

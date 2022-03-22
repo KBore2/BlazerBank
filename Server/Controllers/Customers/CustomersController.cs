@@ -7,22 +7,20 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using OnlineBankMVC.Command.Customers.Command;
-using OnlineBankMVC.Domain.Models;
-using OnlineBankMVC.Infrastructure.Data;
-using OnlineBankMVC.Query.Customers.Query;
+using BlazerBank.Command.Customers.Command;
+using BlazerBank.Domain.Models;
+using BlazerBank.Infrastructure.Data;
+using BlazerBank.Query.Customers.Query;
 
-namespace OnlineBankMVC.Controllers.AddCustomerControllerr
+namespace BlazerBank.Controllers.AddCustomerControllerr
 {
     public class CustomersController : Controller
     {
-        private readonly OnlineBankDBContext _context;
         private readonly IMediator mediator;
 
-        public CustomersController(IMediator mediator, OnlineBankDBContext _context)
+        public CustomersController(IMediator mediator)
         {
             this.mediator = mediator;
-            this._context = _context;
     }
 
         // GET: Customers

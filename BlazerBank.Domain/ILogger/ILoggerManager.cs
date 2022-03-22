@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OnlineBankMVC.Domain.ILogger
+namespace BlazerBank.Domain.ILogger
 {
     public interface ILoggerManager
     {

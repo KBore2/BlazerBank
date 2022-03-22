@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OnlineBankMVC.Domain.IRepositories
+namespace BlazerBank.Domain.IRepositories
 {
     public interface IAsyncRepository<TEntity> where TEntity : class 
     {

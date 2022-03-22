@@ -1,10 +1,10 @@
 ﻿using MediatR;
-using OnlineBankMVC.Domain.Models;
-using OnlineBankMVC.Infrastructure.Repositories;
-using OnlineBankMVC.Command.Accounts.Command;
-using OnlineBankMVC.Command.Cards.Command;
+using BlazerBank.Domain.Models;
+using BlazerBank.Infrastructure.Repositories;
+using BlazerBank.Command.Accounts.Command;
+using BlazerBank.Command.Cards.Command;
 
-namespace OnlineBankMVC.Command.Cards.Handler
+namespace BlazerBank.Command.Cards.Handler
 {
     public class DeleteCardHandler:IRequestHandler<DeleteCardCommand, List<Card>>
     {
