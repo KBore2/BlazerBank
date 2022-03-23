@@ -14,8 +14,8 @@ namespace BlazerBank.Domain.IRepositories
     public class BaseRepository<TEntity> : IAsyncRepository<TEntity> where TEntity : class
     {
         protected readonly DbSet<TEntity> dbset;
-        protected readonly OnlineBankContext context;
-        public BaseRepository(OnlineBankDBContext context)
+        protected readonly BlazerBankDBContext context;
+        public BaseRepository(BlazerBankDBContext context)
         {
             this.context = context;
             dbset = context.Set<TEntity>();

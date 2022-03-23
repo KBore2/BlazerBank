@@ -13,7 +13,7 @@ namespace BlazerBank.Infrastructure.Repositories
 {
     public class CardRepository : BaseRepository<Card>
     {
-        public CardRepository(OnlineBankDBContext context) : base(context)
+        public CardRepository(BlazerBankDBContext context) : base(context)
         {
         }
 

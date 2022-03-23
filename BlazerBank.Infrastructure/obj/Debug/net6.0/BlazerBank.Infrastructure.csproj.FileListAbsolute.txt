@@ -1,0 +1,17 @@
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Infrastructure\obj\Debug\net6.0\BlazerBank.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Infrastructure\obj\Debug\net6.0\BlazerBank.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Infrastructure\obj\Debug\net6.0\BlazerBank.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Infrastructure\obj\Debug\net6.0\BlazerBank.Infrastructure.AssemblyInfo.cs
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Infrastructure\obj\Debug\net6.0\BlazerBank.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Infrastructure\bin\Debug\net6.0\BlazerBank.Infrastructure.deps.json
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Infrastructure\bin\Debug\net6.0\BlazerBank.Infrastructure.runtimeconfig.json
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Infrastructure\bin\Debug\net6.0\BlazerBank.Infrastructure.dll
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Infrastructure\bin\Debug\net6.0\ref\BlazerBank.Infrastructure.dll
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Infrastructure\bin\Debug\net6.0\BlazerBank.Infrastructure.pdb
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Infrastructure\bin\Debug\net6.0\BlazerBank.Domain.dll
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Infrastructure\bin\Debug\net6.0\BlazerBank.Domain.pdb
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Infrastructure\obj\Debug\net6.0\BlazerBank.Infrastructure.csproj.CopyComplete
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Infrastructure\obj\Debug\net6.0\BlazerBank.Infrastructure.dll
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Infrastructure\obj\Debug\net6.0\ref\BlazerBank.Infrastructure.dll
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Infrastructure\obj\Debug\net6.0\BlazerBank.Infrastructure.pdb
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Infrastructure\obj\Debug\net6.0\BlazerBank.Infrastructure.genruntimeconfig.cache

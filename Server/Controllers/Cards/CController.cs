@@ -13,9 +13,9 @@ namespace BlazerBank.Controllers.Cards
 {
     public class CController : Controller
     {
-        private readonly OnlineBankDBContext _context;
+        private readonly BlazerBankDBContext _context;
 
-        public CController(OnlineBankDBContext context)
+        public CController(BlazerBankDBContext context)
         {
             _context = context;
         }
@@ -23,15 +23,15 @@ namespace BlazerBank.Controllers.Cards
         // GET: Cards
         public async Task<IActionResult> Index()
         {
-            var onlineBankDBContext = _context.Cards.Include(null);
-            return View(await onlineBankDBContext.ToListAsync());
+            var BlazerBankDBContext = _context.Cards.Include(null);
+            return View(await BlazerBankDBContext.ToListAsync());
         }
 
         // GET: Cards/2
         /*public async Task<IActionResult> CustomerCards(int id)
         {
-            var onlineBankDBContext = _context.Cards.Include(c => c.Customer);
-            return View(await onlineBankDBContext.ToListAsync());
+            var BlazerBankDBContext = _context.Cards.Include(c => c.Customer);
+            return View(await BlazerBankDBContext.ToListAsync());
         }*/
 
         // GET: Cards/Details/5

@@ -1,0 +1,43 @@
+﻿@page "/customers"
+@inject ICustomerService CustomersService
+@inject NavigationManager NavigationManager
+
+<PageTitle>Customers</PageTitle>
+
+<h3>Customers</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Firstname</th>
+            <th scope="col">Lastname</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var customer in CustomersService.Customers)
+        {
+            <tr>
+                <td>@customer.FirstName</td>
+                <td>@customer.LastName</td>
+                <td>
+                    <button class="btn btn-primary" @onclick(() => ShowCustomer(@customer.CustomerId)><i class="oi oi-pencil"></i></button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+
+    protected override async Task OnInitializedAsync()
+    {
+        await CustomersService.Index(); 
+    }
+
+    public void ShowCustomer(int id)
+    {
+        NavigationManager.NavigateTo($"customers/{id}");
+    }
+
+}
+ 

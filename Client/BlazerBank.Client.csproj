@@ -24,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BlazerBank.Domain\BlazerBank.Domain.csproj" />
     <ProjectReference Include="..\Shared\BlazerBank.Shared.csproj" />
   </ItemGroup>
 

@@ -11,7 +11,7 @@ namespace BlazerBank.Infrastructure.Repositories
 {
     public class TransactionRepository : BaseRepository<Transaction>
     {
-        public TransactionRepository(OnlineBankDBContext context) : base(context)
+        public TransactionRepository(BlazerBankDBContext context) : base(context)
         {
         }
     }

@@ -1,0 +1,14 @@
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Domain\bin\Debug\net6.0\BlazerBank.Domain.deps.json
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Domain\bin\Debug\net6.0\BlazerBank.Domain.runtimeconfig.json
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Domain\bin\Debug\net6.0\BlazerBank.Domain.dll
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Domain\bin\Debug\net6.0\ref\BlazerBank.Domain.dll
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Domain\bin\Debug\net6.0\BlazerBank.Domain.pdb
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Domain\obj\Debug\net6.0\BlazerBank.Domain.csproj.AssemblyReference.cache
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Domain\obj\Debug\net6.0\BlazerBank.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Domain\obj\Debug\net6.0\BlazerBank.Domain.AssemblyInfoInputs.cache
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Domain\obj\Debug\net6.0\BlazerBank.Domain.AssemblyInfo.cs
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Domain\obj\Debug\net6.0\BlazerBank.Domain.csproj.CoreCompileInputs.cache
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Domain\obj\Debug\net6.0\BlazerBank.Domain.dll
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Domain\obj\Debug\net6.0\ref\BlazerBank.Domain.dll
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Domain\obj\Debug\net6.0\BlazerBank.Domain.pdb
+C:\Users\KBore\source\repos\BlazerBank\BlazerBank.Domain\obj\Debug\net6.0\BlazerBank.Domain.genruntimeconfig.cache

@@ -9,13 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazerBank.Client", "Client
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazerBank.Shared", "Shared\BlazerBank.Shared.csproj", "{2913006A-8839-4062-90E2-14AED8CD456F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazerBank.Domain", "BlazerBank.Domain\BlazerBank.Domain.csproj", "{29CE2225-95DB-4C64-B236-8ED741313D4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazerBank.Domain", "BlazerBank.Domain\BlazerBank.Domain.csproj", "{29CE2225-95DB-4C64-B236-8ED741313D4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazerBank.Infrastructure", "BlazerBank.Infrastructure\BlazerBank.Infrastructure.csproj", "{06CF7DD5-D8C8-4406-827A-5F91D74D4842}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazerBank.Infrastructure", "BlazerBank.Infrastructure\BlazerBank.Infrastructure.csproj", "{06CF7DD5-D8C8-4406-827A-5F91D74D4842}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazerBank.Command", "BlazerBank.Command\BlazerBank.Command.csproj", "{8338F5CC-6211-45A6-B594-CF15A8842947}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazerBank.Command", "BlazerBank.Command\BlazerBank.Command.csproj", "{8338F5CC-6211-45A6-B594-CF15A8842947}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazerBank.Query", "BlazerBank.Query\BlazerBank.Query.csproj", "{DB75C661-CC00-4460-9F0A-0B8FFD6CE712}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazerBank.Query", "BlazerBank.Query\BlazerBank.Query.csproj", "{DB75C661-CC00-4460-9F0A-0B8FFD6CE712}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

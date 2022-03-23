@@ -10,3 +10,5 @@ C:\Users\KBore\source\repos\BlazerBank\Shared\obj\Debug\net6.0\BlazerBank.Shared
 C:\Users\KBore\source\repos\BlazerBank\Shared\obj\Debug\net6.0\BlazerBank.Shared.dll
 C:\Users\KBore\source\repos\BlazerBank\Shared\obj\Debug\net6.0\ref\BlazerBank.Shared.dll
 C:\Users\KBore\source\repos\BlazerBank\Shared\obj\Debug\net6.0\BlazerBank.Shared.pdb
+C:\Users\KBore\source\repos\BlazerBank\Shared\bin\Debug\net6.0\BlazerBank.Shared.runtimeconfig.json
+C:\Users\KBore\source\repos\BlazerBank\Shared\obj\Debug\net6.0\BlazerBank.Shared.genruntimeconfig.cache

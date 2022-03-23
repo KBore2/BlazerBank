@@ -22,7 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Server\BlazerBank.Server.csproj" />
+    <ProjectReference Include="..\BlazerBank.Domain\BlazerBank.Domain.csproj" />
+    <ProjectReference Include="..\BlazerBank.Infrastructure\BlazerBank.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

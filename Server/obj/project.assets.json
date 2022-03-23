@@ -3342,6 +3342,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "BlazerBank.Domain": "1.0.0",
           "BlazerBank.Shared": "1.0.0",
           "MediatR": "10.0.1",
           "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1",
@@ -3354,6 +3355,24 @@
         },
         "runtime": {
           "bin/placeholder/BlazerBank.Client.dll": {}
+        }
+      },
+      "BlazerBank.Command/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "BlazerBank.Domain": "1.0.0",
+          "BlazerBank.Infrastructure": "1.0.0",
+          "MediatR": "10.0.1",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.2",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.2"
+        },
+        "compile": {
+          "bin/placeholder/BlazerBank.Command.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlazerBank.Command.dll": {}
         }
       },
       "BlazerBank.Domain/1.0.0": {
@@ -10285,6 +10304,11 @@
       "path": "../Client/BlazerBank.Client.csproj",
       "msbuildProject": "../Client/BlazerBank.Client.csproj"
     },
+    "BlazerBank.Command/1.0.0": {
+      "type": "project",
+      "path": "../BlazerBank.Command/BlazerBank.Command.csproj",
+      "msbuildProject": "../BlazerBank.Command/BlazerBank.Command.csproj"
+    },
     "BlazerBank.Domain/1.0.0": {
       "type": "project",
       "path": "../BlazerBank.Domain/BlazerBank.Domain.csproj",
@@ -10309,6 +10333,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "BlazerBank.Client >= 1.0.0",
+      "BlazerBank.Command >= 1.0.0",
       "BlazerBank.Query >= 1.0.0",
       "BlazerBank.Shared >= 1.0.0",
       "MediatR >= 10.0.1",
@@ -10347,6 +10372,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\KBore\\source\\repos\\BlazerBank\\BlazerBank.Command\\BlazerBank.Command.csproj": {
+              "projectPath": "C:\\Users\\KBore\\source\\repos\\BlazerBank\\BlazerBank.Command\\BlazerBank.Command.csproj"
+            },
             "C:\\Users\\KBore\\source\\repos\\BlazerBank\\BlazerBank.Query\\BlazerBank.Query.csproj": {
               "projectPath": "C:\\Users\\KBore\\source\\repos\\BlazerBank\\BlazerBank.Query\\BlazerBank.Query.csproj"
             },

@@ -3320,6 +3320,22 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "BlazerBank.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "MediatR": "10.0.1",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.2",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.2"
+        },
+        "compile": {
+          "bin/placeholder/BlazerBank.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlazerBank.Domain.dll": {}
+        }
+      },
       "BlazerBank.Shared/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -6552,6 +6568,22 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
+        }
+      },
+      "BlazerBank.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "MediatR": "10.0.1",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.2",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.2"
+        },
+        "compile": {
+          "bin/placeholder/BlazerBank.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlazerBank.Domain.dll": {}
         }
       },
       "BlazerBank.Shared/1.0.0": {
@@ -13941,6 +13973,11 @@
         "system.xml.xdocument.nuspec"
       ]
     },
+    "BlazerBank.Domain/1.0.0": {
+      "type": "project",
+      "path": "../BlazerBank.Domain/BlazerBank.Domain.csproj",
+      "msbuildProject": "../BlazerBank.Domain/BlazerBank.Domain.csproj"
+    },
     "BlazerBank.Shared/1.0.0": {
       "type": "project",
       "path": "../Shared/BlazerBank.Shared.csproj",
@@ -13949,6 +13986,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "BlazerBank.Domain >= 1.0.0",
       "BlazerBank.Shared >= 1.0.0",
       "MediatR >= 10.0.1",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 10.0.1",
@@ -13987,6 +14025,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\KBore\\source\\repos\\BlazerBank\\BlazerBank.Domain\\BlazerBank.Domain.csproj": {
+              "projectPath": "C:\\Users\\KBore\\source\\repos\\BlazerBank\\BlazerBank.Domain\\BlazerBank.Domain.csproj"
+            },
             "C:\\Users\\KBore\\source\\repos\\BlazerBank\\Shared\\BlazerBank.Shared.csproj": {
               "projectPath": "C:\\Users\\KBore\\source\\repos\\BlazerBank\\Shared\\BlazerBank.Shared.csproj"
             }

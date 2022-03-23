@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BlazerBank.Command\BlazerBank.Command.csproj" />
     <ProjectReference Include="..\BlazerBank.Query\BlazerBank.Query.csproj" />
     <ProjectReference Include="..\Client\BlazerBank.Client.csproj" />
     <ProjectReference Include="..\Shared\BlazerBank.Shared.csproj" />

@@ -1,5 +1,4 @@
-﻿using BlazerBank.Domain.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace BlazerBank.Domain.Models
