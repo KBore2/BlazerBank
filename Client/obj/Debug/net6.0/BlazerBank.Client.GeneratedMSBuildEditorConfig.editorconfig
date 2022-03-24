@@ -22,16 +22,20 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/KBore/source/repos/BlazerBank/Client/Pages/Cards/CardView.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FyZHNcQ2FyZFZpZXcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/KBore/source/repos/BlazerBank/Client/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KBore/source/repos/BlazerBank/Client/Pages/Customers.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJzLnJhem9y
+[C:/Users/KBore/source/repos/BlazerBank/Client/Pages/Customers/Customers.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJzXEN1c3RvbWVycy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KBore/source/repos/BlazerBank/Client/Pages/CustomerView.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJWaWV3LnJhem9y
+[C:/Users/KBore/source/repos/BlazerBank/Client/Pages/Customers/CustomerView.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJzXEN1c3RvbWVyVmlldy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/KBore/source/repos/BlazerBank/Client/Pages/FetchData.razor]

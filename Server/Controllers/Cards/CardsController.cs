@@ -14,6 +14,8 @@ using BlazerBank.Query.Cards.Query;
 
 namespace BlazerBank.Controllers.AddCardControllerr
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class CardsController : Controller
     {
         private readonly IMediator mediator;
@@ -30,7 +32,7 @@ namespace BlazerBank.Controllers.AddCardControllerr
         }
 
         // GET: Cards/2
-        [Route("Cards/{id}")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> CardsByCustomer(int id)
         {
             //return View(await mediator.Send(new GetCardByCustomerIDQuery(id)));
@@ -40,7 +42,7 @@ namespace BlazerBank.Controllers.AddCardControllerr
         }
 
         // GET: Cards/2/Details/2
-        [Route("Cards/{customerId}/Details/{cardNumber}")]
+        [HttpGet("{customerId}/Details/{cardNumber}")]
         public async Task<IActionResult> Details(int customerId,int cardNumber)
         {
 
@@ -49,7 +51,7 @@ namespace BlazerBank.Controllers.AddCardControllerr
         }
 
         // GET: Cards/Create
-        [Route("Cards/{customerId}/Create")]
+        [HttpPost("{customerId}/Create")]
         public IActionResult Create()
         {
             return View();
@@ -58,10 +60,8 @@ namespace BlazerBank.Controllers.AddCardControllerr
         // POST: Cards/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [Route("Cards/{customerId}/Create")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(int customerId,[Bind("ExpiryDate,Ccv")] Card Card)
+        [HttpPost("{customerId}/Create")]
+        public async Task<IActionResult> Create(int customerId,Card Card)
         {
             ModelState.Remove("Customer");
             if (ModelState.IsValid)
@@ -73,51 +73,33 @@ namespace BlazerBank.Controllers.AddCardControllerr
             return View(Card);
         }
 
-        // GET: Cards/2/Edit/5
-        [Route("Cards/{customerId}/Edit/{cardNumber}")]
-        public async Task<IActionResult> Edit(int customerId, int cardNumber)
-        {
-            var Card = await mediator.Send(new GetCardByIDQuery(customerId, cardNumber));
-            return Card == null ? NotFound() : View(Card);
-        }
 
         // POST: Cards/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [Route("Cards/{customerId}/Edit/{cardNumber}")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int customerId,int cardNumber, [Bind("ExpiryDate,Ccv")] Card Card)
+        [HttpPut("{customerId}/Edit/{cardNumber}")]
+        public async Task<IActionResult> Edit(int customerId, int cardNumber, Card Card)
         {
             ModelState.Remove("Customer");
             if (ModelState.IsValid)
             {
-                
+
                 Card.CardNumber = cardNumber;
                 Card.CustomerId = customerId;
-                await mediator.Send(new UpdateCardCommand(Card));
-                return RedirectToAction(nameof(Index));
-            }
-            
-            return View(Card);
-        }
+                return Ok(await mediator.Send(new UpdateCardCommand(Card)));
 
-        // GET: Cards/2/Delete/5
-        [Route("Cards/{customerId}/Delete/{cardNumber}")]
-        public async Task<IActionResult> Delete(int customerId, int cardNumber)
-        {
-            var Card = await mediator.Send(new GetCardByIDQuery(customerId,cardNumber));
-            return Card == null ? NotFound() : View(Card);
+            }
+
+            return NotFound();
         }
+        
 
         // POST: Cards/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [Route("Cards/{customerId}/Delete/{cardNumber}")]
-        [ValidateAntiForgeryToken]
+        [HttpPut("{customerId}/Delete/{cardNumber}")]
         public async Task<IActionResult> DeleteConfirmed(int customerId, int cardNumber)
         {
             await mediator.Send(new DeleteCardCommand(cardNumber));
-            return RedirectToAction(nameof(Index));
+            return NoContent();
         }
     }
 }

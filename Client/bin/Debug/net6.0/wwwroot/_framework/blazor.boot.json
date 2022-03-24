@@ -269,7 +269,7 @@
       "System.Private.CoreLib.dll": "sha256-9NtEbYixyog7vUmeYXyyqzfBXUYl8wxoVQ26Ji7sNRg=",
       "BlazerBank.Domain.dll": "sha256-ENV4qFkXif8urQ2xDH+kGp09ldTwfeIcXinir\/Nc8k8=",
       "BlazerBank.Shared.dll": "sha256-2+Fy09au\/B1w8CMkVfUO2FP5vuehG5JoJG2376W3uws=",
-      "BlazerBank.Client.dll": "sha256-DCrKkZnretZjCuqGIQ1yF+YRXRqIP89JrZyYcBDt6tQ="
+      "BlazerBank.Client.dll": "sha256-cOOXdsJeNRiW9kQi8QXc\/kemdKyO64Ja7sR8PfvcjlU="
     },
     "extensions": null,
     "lazyAssembly": null,
@@ -277,7 +277,7 @@
     "pdb": {
       "BlazerBank.Domain.pdb": "sha256-p\/kAdwhVuy44cEk3vZegGVfLDMvKNQ0Wzsqdo1j1+s8=",
       "BlazerBank.Shared.pdb": "sha256-bnoPay4AYeCRU+OLH1GDuMtxs+MBBZUTgsP\/xTXpNo8=",
-      "BlazerBank.Client.pdb": "sha256-ocrU6ggBsYGD40tCqgueGocmgQg+cjTM9OxONmF3AEg="
+      "BlazerBank.Client.pdb": "sha256-aZ2JiC2yd8N0GUXgshykCLKlQlwBiVfFoWk4Nas13YM="
     },
     "runtime": {
       "dotnet.6.0.1.ikm2xnl1z8.js": "sha256-awQsJ\/WxYhouHPuE+i3eJqjA4XClQlr2rD6nKvW80ww=",

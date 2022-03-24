@@ -6,9 +6,11 @@ namespace BlazerBank.Client.Services.CustomerServices
     public interface ICustomerService
     {
         public List<Customer> Customers { get; set; }
+
+        public Customer Customer { get; set; }
         public Task<List<Customer>> Index();
 
-        public Task<Customer> Details(int id);
+        public Task<Customer> GetCustomer(int? id);
 
         
         /*public IActionResult Create()
@@ -17,13 +19,13 @@ namespace BlazerBank.Client.Services.CustomerServices
         }*/
 
       
-        public Task<bool> Create(Customer customer);
+        public Task Create(Customer customer);
 
         public Task<Customer> Edit(int id);
 
-        public Task<bool> Edit(int id, Customer customer);
+        public Task Edit(int? id, Customer customer);
 
         public Task<Customer> Delete(int id);
-        public Task<bool> DeleteConfirmed(int id);
+        public Task DeleteConfirmed(int? id);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using BlazerBank.Client.Pages;
 using BlazerBank.Domain.Models;
+using Microsoft.AspNetCore.Components;
 using System.Net.Http.Json;
 
 namespace BlazerBank.Client.Services.CustomerServices
@@ -8,16 +9,19 @@ namespace BlazerBank.Client.Services.CustomerServices
     {
         public List<Customer> Customers { get; set; } = new List<Customer>();
 
-        private readonly HttpClient http;
+        public Customer Customer { get; set; } = new Customer();
 
-        public CustomerService(HttpClient http)
+        private readonly HttpClient http;
+        //private readonly NavigationManager navigationManager;
+
+        public CustomerService(HttpClient http, NavigationManager navigationManager)
         {
             this.http = http;
         }
         
-        public Task<bool> Create(Customer customer)
+        public async Task Create(Customer customer)
         {
-            throw new NotImplementedException();
+            var result = await http.PostAsJsonAsync("api/Customers/Create",customer);
         }
 
         public Task<Customer> Delete(int id)
@@ -25,14 +29,16 @@ namespace BlazerBank.Client.Services.CustomerServices
             throw new NotImplementedException();
         }
 
-        public Task<bool> DeleteConfirmed(int id)
+        public async Task DeleteConfirmed(int? id)
         {
-            throw new NotImplementedException();
+            var result = await http.DeleteAsync($"api/Customers/Delete/{id}");
         }
 
-        public Task<Customer> Details(int id)
+        public async Task<Customer> GetCustomer(int? id)
         {
-            throw new NotImplementedException();
+            var result = await http.GetFromJsonAsync<Customer>($"api/Customers/Details/{id}");
+            Customer = result;
+            return Customer;
         }
 
         public Task<Customer> Edit(int id)
@@ -40,9 +46,11 @@ namespace BlazerBank.Client.Services.CustomerServices
             throw new NotImplementedException();
         }
 
-        public Task<bool> Edit(int id, Customer customer)
+        public async Task Edit(int? id, Customer customer)
         {
-            throw new NotImplementedException();
+            var result = await http.PutAsJsonAsync($"api/Customers/Edit/{id}",customer);
+            Customer = await result.Content.ReadFromJsonAsync<Customer>();
+
         }
 
         public async Task<List<Customer>> Index()

@@ -1,5 +1,4 @@
-﻿#nullable disable
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -33,73 +32,46 @@ namespace BlazerBank.Controllers.AddCustomerControllers
         }
 
         // GET: Customers/Details/5
-        [HttpGet("/Details/{id}")]
+        [HttpGet("Details/{id}")]
         public async Task<IActionResult> Details(int id)
         {
 
             var customer = await mediator.Send(new GetCustomerByIDQuery(id));
-            return customer == null? NotFound(): View(customer);
+            return Ok(customer);
         }
 
-        // GET: Customers/Create
-        [HttpGet("/Create")]
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Customers/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost("/Create")]
-        public async Task<IActionResult> Create([Bind("FirstName,LastName")] Customer customer)
+        [HttpPost("Create")]
+        public async Task<IActionResult> Create(Customer customer)
         {
             if (ModelState.IsValid)
             {
-                await mediator.Send(new CreateCustomerCommand(customer));
-                return RedirectToAction(nameof(Index));
+                return Ok(await mediator.Send(new CreateCustomerCommand(customer)));
             }
-            return View(customer);
-        }
-
-        // GET: Customers/Edit/5
-        [HttpGet("/Edit/{id}")]
-        public async Task<IActionResult> Edit(int id)
-        {
-            var customer = await mediator.Send(new GetCustomerByIDQuery(id));
-            return customer == null ? NotFound() : View(customer);
+            return NotFound();
         }
 
         // POST: Customers/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPut("/Edit/{id}")]
-        public async Task<IActionResult> Edit(int id, [Bind("FirstName,LastName")] Customer customer)
+        [HttpPut("Edit/{id}")]
+        public async Task<IActionResult> Edit(int id, Customer customer)
         {
             if (ModelState.IsValid)
             {
                 customer.CustomerId = id;
                 await mediator.Send(new UpdateCustomerCommand(customer));
-                return RedirectToAction(nameof(Index));
+                return Ok(customer);
             }
-            return View(customer);
-        }
-
-        // GET: Customers/Delete/5
-        [HttpGet("/Delete/{id}")]
-        public async Task<IActionResult> Delete(int id)
-        {
-            var customer = await mediator.Send(new GetCustomerByIDQuery(id));
-            return customer == null ? NotFound() : View(customer);
+            return NotFound();
         }
 
         // POST: Customers/Delete/5
-        [HttpDelete("/Delete/{id}")]
+        [HttpDelete("Delete/{id}")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             
             await mediator.Send(new DeleteCustomerCommand(id));
-            return RedirectToAction(nameof(Index));
+            return NoContent();
         }
     }
 }

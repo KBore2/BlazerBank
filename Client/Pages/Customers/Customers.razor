@@ -20,12 +20,13 @@
                 <td>@customer.FirstName</td>
                 <td>@customer.LastName</td>
                 <td>
-                    <button class="btn btn-primary" @onclick(() => ShowCustomer(@customer.CustomerId)><i class="oi oi-pencil"></i></button>
+                    <button class="btn btn-primary" @onclick="(() => ShowCustomer(customer.CustomerId))"><i class="oi oi-pencil"></i></button>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+<button type="button" class="btn btn-primary" @onclick="CreateCustomer">Create Customer</button>
 
 @code {
 
@@ -36,7 +37,12 @@
 
     public void ShowCustomer(int id)
     {
-        NavigationManager.NavigateTo($"customers/{id}");
+        NavigationManager.NavigateTo($"customerview/{id}");
+    }
+
+    void CreateCustomer()
+    {
+        NavigationManager.NavigateTo("customerview");
     }
 
 }
