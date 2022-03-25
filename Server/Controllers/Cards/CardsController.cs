@@ -28,7 +28,7 @@ namespace BlazerBank.Controllers.AddCardControllerr
         // GET: Cards
         public async Task<IActionResult> Index()
         {
-            return View(await mediator.Send(new GetAllCardsQuery()));
+            return Ok(await mediator.Send(new GetAllCardsQuery()));
         }
 
         // GET: Cards/2
@@ -38,7 +38,7 @@ namespace BlazerBank.Controllers.AddCardControllerr
             //return View(await mediator.Send(new GetCardByCustomerIDQuery(id)));
             TempData["customerId"] = id;
             var card = await mediator.Send(new GetCardByCustomerIDQuery(id));
-            return View(card);
+            return Ok(card);
         }
 
         // GET: Cards/2/Details/2
@@ -47,15 +47,15 @@ namespace BlazerBank.Controllers.AddCardControllerr
         {
 
             var Card = await mediator.Send(new GetCardByIDQuery(customerId, cardNumber));
-            return Card == null? NotFound(): View(Card);
+            return Card == null? NotFound(): Ok(Card);
         }
 
         // GET: Cards/Create
-        [HttpPost("{customerId}/Create")]
+        /*[HttpPost("{customerId}/Create")]
         public IActionResult Create()
         {
             return View();
-        }
+        }*/
 
         // POST: Cards/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
@@ -67,10 +67,9 @@ namespace BlazerBank.Controllers.AddCardControllerr
             if (ModelState.IsValid)
             {
                 Card.CustomerId = customerId;
-                await mediator.Send(new CreateCardCommand(Card));
-                return RedirectToAction(nameof(Index));
+                return Ok(await mediator.Send(new CreateCardCommand(Card)));
             }
-            return View(Card);
+            return NotFound();
         }
 
 

@@ -18,33 +18,40 @@ namespace BlazerBank.Client.Services.CardServices
             this.http = http;
         }
         
-        public async Task Create(Card Card)
+        public async Task Create(int? customrid,Card Card)
         {
-            var result = await http.PostAsJsonAsync("api/Cards/Create",Card);
+            var result = await http.PostAsJsonAsync($"api/Cards{customrid}Create", Card);
         }
 
-        public async Task DeleteConfirmed(int? id)
+        public async Task DeleteConfirmed(int? customrid,int? id)
         {
-            var result = await http.DeleteAsync($"api/Cards/Delete/{id}");
+            var result = await http.DeleteAsync($"api/Cards/{customrid}/Delete/{id}");
         }
 
-        public async Task<Card> GetCard(int? id)
+        public async Task<Card> GetCard(int? customrid,int? id)
         {
-            var result = await http.GetFromJsonAsync<Card>($"api/Cards/Details/{id}");
+            var result = await http.GetFromJsonAsync<Card>($"api/Cards/{customrid}/Details/{id}");
             Card = result;
             return Card;
         }
 
-        public async Task Edit(int? id, Card Card)
+        public async Task Edit(int? customrid,int? id, Card Card)
         {
-            var result = await http.PutAsJsonAsync($"api/Cards/Edit/{id}",Card);
+            var result = await http.PutAsJsonAsync($"api/Cards/{customrid}/Edit/{id}",Card);
             Card = await result.Content.ReadFromJsonAsync<Card>();
 
         }
 
         public async Task<List<Card>> Index()
         {
-            var result = await http.GetFromJsonAsync<List<Card>>("api/Cards");
+            var result = await http.GetFromJsonAsync<List<Card>>($"api/Cards");
+            Cards = result;
+            return Cards;
+        }
+
+        public async Task<List<Card>> CardsByCustomer(int? customrid)
+        {
+            var result = await http.GetFromJsonAsync<List<Card>>($"api/Cards/{customrid}");
             Cards = result;
             return Cards;
         }

@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 using NLog;
 using System.Reflection;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -59,6 +60,8 @@ builder.Services.AddMediatR(typeof(GetTransactionByIDQuery).GetTypeInfo().Assemb
 builder.Services.AddMediatR(typeof(GetAllTransactionsQuery).GetTypeInfo().Assembly);
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddControllers().AddJsonOptions(x =>
+                x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<BlazerBankDBContext>(

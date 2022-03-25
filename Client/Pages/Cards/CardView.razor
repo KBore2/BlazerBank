@@ -1,77 +1,62 @@
-﻿@page "/customerview"
-@page "/customerview/{id:int}"
+﻿@page "/cardview/{customerid:int}/{id:int}"
 @using BlazerBank.Domain.Models
 @inject NavigationManager NavigationManager
 
-@inject ICustomerService CustomerService
+@inject ICardService CardService
 
-<h3>Customer</h3>
-
-@if(Id == null)
+@if (customerId!=null && Id != null)
 {
-    <h3>Create new Customer</h3>
-}
-else
-{
-    <h3>Edit @CustomerService.Customer.FirstName</h3>
+    <h3>Card Number: @CardService.Card.CardNumber</h3>
 }
 
-<EditForm Model="@CustomerService.Customer" OnSubmit="HandleSubmit">
+<EditForm Model="@CardService.Card" OnSubmit="HandleSubmit">
     <div>
-        <label for="firstname">First Name</label>
-        <InputText id="firstname" @bind-Value="@CustomerService.Customer.FirstName" class="form-control"></InputText>
+        <label for="ExpiryDate">ExpiryDate</label>
+        <InputDate id="expirydate" @bind-Value="@CardService.Card.ExpiryDate" class="form-control"></InputDate>
     </div>
     <div>
-        <label for="lastname">Last Name</label>
-        <InputText id="lastname" @bind-Value="@CustomerService.Customer.LastName" class="form-control"></InputText>
+        <label for="ccv">CCV</label>
+        <InputNumber id="ccv" @bind-Value="@CardService.Card.Ccv" class="form-control"></InputNumber>
     </div>
-    <button type="submit" class="btn btn-primary">@btnText</button>
-    <button type="button" class="btn btn-danger" @onclick="DeleteCustomer">Delete Customer</button>
+    <button type="submit" class="btn btn-primary">Update Card</button>
+    <button type="button" class="btn btn-danger" @onclick="DeleteCard">Delete Card</button>
 </EditForm>
 
 @code {
 
     [Parameter]
+    public int? customerId { get; set; }
+    
+    [Parameter]
     public int? Id { get; set; }
-
-    string btnText = string.Empty;
-
 
     protected override async Task OnParametersSetAsync()
     {
-        if (Id == null)
+        if (customerId!=null && Id != null)
         {
-            btnText = "Save new customer";
-        }
-        else
-        {
-            btnText = "Update Customer";
-            await CustomerService.GetCustomer(Id);
+            await CardService.GetCard(customerId,Id);
         }
     }
 
 
     async void HandleSubmit()
     {
-        if (Id == null)
-        {
-            await CustomerService.Create(CustomerService.Customer);
-            NavigationManager.NavigateTo("customers");
-        }
-        else
-        {
-            await CustomerService.Edit(Id,CustomerService.Customer);
-        }
-    }
-
-    async void DeleteCustomer()
-    {
         if (Id != null)
         {
-            await CustomerService.DeleteConfirmed(CustomerService.Customer.CustomerId);
+            await CardService.Edit(CardService.Card.CustomerId,CardService.Card.CardNumber,CardService.Card);
         }
-        NavigationManager.NavigateTo("customers");
     }
 
+    async void DeleteCard()
+    {
+
+        if (Id != null)
+        {
+            int customerId = CardService.Card.CustomerId;
+            await CardService.DeleteConfirmed(CardService.Card.CustomerId,CardService.Card.CardNumber);
+            NavigationManager.NavigateTo($"cards/{customerId}");
+        }
+    }
 
 }
+

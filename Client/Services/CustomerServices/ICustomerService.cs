@@ -12,13 +12,6 @@ namespace BlazerBank.Client.Services.CustomerServices
 
         public Task<Customer> GetCustomer(int? id);
 
-        
-        /*public IActionResult Create()
-        {
-            return View();
-        }*/
-
-      
         public Task Create(Customer customer);
 
         public Task<Customer> Edit(int id);
@@ -27,5 +20,6 @@ namespace BlazerBank.Client.Services.CustomerServices
 
         public Task<Customer> Delete(int id);
         public Task DeleteConfirmed(int? id);
+
     }
 }

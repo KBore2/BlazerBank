@@ -1,0 +1,95 @@
+﻿@page "/cards"
+@page "/cards/{customerid:int}"
+@inject ICardService CardsService
+@inject NavigationManager NavigationManager
+
+<PageTitle>Cards</PageTitle>
+
+@if (CustomerId == null)
+{
+    <h3>Cards</h3>
+}
+else
+{
+    @if (CardsService.Cards.Count > 0)
+    {
+        <h3>@CardsService.Cards.First().Customer.FirstName </h3>
+    }
+    else
+    {
+        <h3>You have no cards</h3>
+    }
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            
+            <th scope="col">Card Number</th>
+            <th scope="col">ExpiryDate</th>
+            <th scope="col">CCV</th>
+            @if(CustomerId==null)
+            {
+                <th scope="col">Customer</th>
+            }  
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var Card in CardsService.Cards)
+        {
+        <tr>
+            <td>@Card.CardNumber</td>
+            <td>@Card.ExpiryDate</td>
+            <td>@Card.Ccv</td>
+            @if(CustomerId==null)
+            {
+                <td>
+                    @Card.Customer.FirstName
+                </td>
+            }
+            else
+            {
+              <td>
+                <button class="btn btn-primary" @onclick="(() => ShowCard(Card.CustomerId,Card.CardNumber))"><i class="oi oi-pencil"></i></button>
+              </td>
+            }
+            
+        </tr>
+        }
+        
+    </tbody>
+</table>
+
+@code {
+
+    [Parameter]
+    public int? CustomerId { get; set; }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (CustomerId == null)
+        {
+            await CardsService.Index();
+        }
+        else
+        {
+            await CardsService.CardsByCustomer(CustomerId);
+        }
+    }
+
+
+    public void ShowCard(int customerid,int id)
+    {
+        NavigationManager.NavigateTo($"cardview/{customerid}/{id}");
+    }
+
+    void CreateCard()
+    {
+        if(CustomerId != null)
+        {
+            NavigationManager.NavigateTo($"cardcreate/{CustomerId}");
+        }
+    }
+
+}
+ 

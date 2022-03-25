@@ -23,7 +23,7 @@ namespace BlazerBank.Query.Cards.Handler
 
         public async Task<List<Card>> Handle(GetAllCardsQuery request, CancellationToken cancellationToken)
         {
-            var response = await repoistory.ListAsync();
+            var response = await repoistory.GetAll();
             return response == null ? throw new Exception("Card not found") : response;
         }
     }

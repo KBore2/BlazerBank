@@ -1,0 +1,38 @@
+﻿@page "/cardcreate/{id:int}"
+@using BlazerBank.Domain.Models
+@inject NavigationManager NavigationManager
+
+@inject ICardService CardService
+
+@if (Id != null)
+{
+    <h3>Create Card</h3>
+}
+
+<EditForm Model="@CardService.Card" OnSubmit="HandleSubmit">
+    <div>
+        <label for="ExpiryDate">ExpiryDate</label>
+        <InputDate id="expirydate" @bind-Value="@CardService.Card.ExpiryDate" class="form-control"></InputDate>
+    </div>
+    <div>
+        <label for="ccv">CCV</label>
+        <InputNumber id="ccv" @bind-Value="@CardService.Card.Ccv" class="form-control"></InputNumber>
+    </div>
+    <button type="submit" class="btn btn-primary">Create Card</button>
+</EditForm>
+
+@code {
+
+    [Parameter]
+    public int? Id { get; set; }
+
+    async void HandleSubmit()
+    {
+        if (Id != null)
+        {
+            await CardService.Create(Id,CardService.Card);
+            NavigationManager.NavigateTo($"cards/{Id}");
+        }
+    }
+}
+
