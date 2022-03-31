@@ -79,22 +79,22 @@ namespace BlazerBank.Controllers.AddCardControllerr
         [HttpPut("{customerId}/Edit/{cardNumber}")]
         public async Task<IActionResult> Edit(int customerId, int cardNumber, Card Card)
         {
-            ModelState.Remove("Customer");
+            /*ModelState.Remove("Card.Customer");
             if (ModelState.IsValid)
-            {
+            {*/
 
                 Card.CardNumber = cardNumber;
                 Card.CustomerId = customerId;
                 return Ok(await mediator.Send(new UpdateCardCommand(Card)));
 
-            }
+            /*}
 
-            return NotFound();
+            return NotFound();*/
         }
         
 
         // POST: Cards/Delete/5
-        [HttpPut("{customerId}/Delete/{cardNumber}")]
+        [HttpDelete("{customerId}/Delete/{cardNumber}")]
         public async Task<IActionResult> DeleteConfirmed(int customerId, int cardNumber)
         {
             await mediator.Send(new DeleteCardCommand(cardNumber));

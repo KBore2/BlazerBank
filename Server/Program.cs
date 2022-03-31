@@ -10,6 +10,7 @@ using BlazerBank.Query.Accounts.Query;
 using BlazerBank.Query.Cards.Query;
 using BlazerBank.Query.Customers.Query;
 using BlazerBank.Query.Transactions.Query;
+using BlazerBank.Server;
 using MediatR;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
@@ -19,6 +20,7 @@ using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddJWTTokenServices(builder.Configuration);
 // Add services to the container.
 LogManager.LoadConfiguration(string.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
 builder.Services.AddSingleton<ILoggerManager, LoggerManager>();
@@ -59,9 +61,9 @@ builder.Services.AddMediatR(typeof(GetAllCustomersQuery).GetTypeInfo().Assembly)
 builder.Services.AddMediatR(typeof(GetTransactionByIDQuery).GetTypeInfo().Assembly);
 builder.Services.AddMediatR(typeof(GetAllTransactionsQuery).GetTypeInfo().Assembly);
 
-builder.Services.AddControllersWithViews();
-builder.Services.AddControllers().AddJsonOptions(x =>
-                x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+builder.Services.AddControllers();
+/*builder.Services.AddControllers().AddJsonOptions(x =>
+                x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);*/
 builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<BlazerBankDBContext>(
@@ -70,11 +72,17 @@ builder.Services.AddDbContext<BlazerBankDBContext>(
         options.UseSqlServer(builder.Configuration.GetConnectionString("DBConnection"));
     });
 
+builder.Services.AddEndpointsApiExplorer();
+//builder.Services.AddSwaggerGen();
+
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    /*app.UseSwagger();
+    app.UseSwaggerUI();*/
     app.UseWebAssemblyDebugging();
 }
 else

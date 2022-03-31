@@ -1,4 +1,4 @@
-﻿h@page "/customers"
+﻿@page "/customers"
 @inject ICustomerService CustomersService
 @inject NavigationManager NavigationManager
 
@@ -11,6 +11,8 @@
         <tr>
             <th scope="col">Firstname</th>
             <th scope="col">Lastname</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
         </tr>
     </thead>
     <tbody>
@@ -19,6 +21,9 @@
             <tr>
                 <td>@customer.FirstName</td>
                 <td>@customer.LastName</td>
+                <td>
+                    <button class="btn btn-primary" @onclick="(() => ShowCards(customer.CustomerId))">Cards</button>
+                </td>
                 <td>
                     <button class="btn btn-primary" @onclick="(() => ShowCustomer(customer.CustomerId))"><i class="oi oi-pencil"></i></button>
                 </td>
@@ -38,6 +43,11 @@
     public void ShowCustomer(int id)
     {
         NavigationManager.NavigateTo($"customerview/{id}");
+    }
+
+    public void ShowCards(int id)
+    {
+        NavigationManager.NavigateTo($"cards/{id}");
     }
 
     void CreateCustomer()

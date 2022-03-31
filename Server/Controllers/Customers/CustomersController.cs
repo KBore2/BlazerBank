@@ -73,5 +73,11 @@ namespace BlazerBank.Controllers.AddCustomerControllers
             await mediator.Send(new DeleteCustomerCommand(id));
             return NoContent();
         }
+
+        [HttpPost("Login")]
+        public async Task<IActionResult> GetToken(Customer customer)
+        {
+            return Ok(await mediator.Send(new GetCustomerLoginQuery(customer)));
+        }
     }
 }

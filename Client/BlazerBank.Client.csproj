@@ -29,7 +29,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Accounts\" />
     <Folder Include="Pages\Transactions\" />
   </ItemGroup>
 

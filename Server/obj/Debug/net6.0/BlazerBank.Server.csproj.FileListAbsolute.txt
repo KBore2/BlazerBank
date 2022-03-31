@@ -293,3 +293,4 @@ C:\Users\KBore\source\repos\BlazerBank\Server\bin\Debug\net6.0\BlazerBank.Query.
 C:\Users\KBore\source\repos\BlazerBank\Server\bin\Debug\net6.0\BlazerBank.Domain.pdb
 C:\Users\KBore\source\repos\BlazerBank\Server\bin\Debug\net6.0\BlazerBank.Infrastructure.pdb
 C:\Users\KBore\source\repos\BlazerBank\Server\bin\Debug\net6.0\nlog.config
+C:\Users\KBore\source\repos\BlazerBank\Server\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

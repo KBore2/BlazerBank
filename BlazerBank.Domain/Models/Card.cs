@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace BlazerBank.Domain.Models
 {
@@ -10,6 +11,6 @@ namespace BlazerBank.Domain.Models
         public int Ccv { get; set; }
         public int CustomerId { get; set; }
 
-        public virtual Customer Customer { get; set; } = null!;
+        public virtual Customer? Customer { get; set; }
     }
 }

@@ -1,0 +1,41 @@
+﻿@*@page "/accountcreate/{id:int}"
+@using BlazerBank.Client.Services.AccountServices
+@using BlazerBank.Domain.Models
+@inject NavigationManager NavigationManager
+
+@inject IAccountService AccountService
+
+@if (Id != null)
+{
+    <h3>Create account</h3>
+}
+
+<EditForm Model="@AccountService.account" OnSubmit="HandleSubmit">
+    <div>
+        <label for="ExpiryDate">ExpiryDate</label>
+        <InputDate id="expirydate" @bind-Value="@AccountService.account.ExpiryDate" class="form-control"></InputDate>
+    </div>
+    <div>
+        <label for="ccv">CCV</label>
+        <InputNumber id="ccv" @bind-Value="@AccountService.account.Ccv" class="form-control"></InputNumber>
+    </div>
+    <button type="submit" class="btn btn-primary">Create account</button>
+</EditForm>
+
+@code {
+
+    [Parameter]
+    public int? Id { get; set; }
+
+    async void HandleSubmit()
+    {
+        if (Id != null)
+        {
+            await AccountService.Create(Id,AccountService.account);
+            NavigationManager.NavigateTo($"cards/{Id}");
+        }
+    }
+    
+}
+
+*@

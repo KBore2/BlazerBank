@@ -18,9 +18,9 @@ namespace BlazerBank.Client.Services.CardServices
             this.http = http;
         }
         
-        public async Task Create(int? customrid,Card Card)
+        public async Task Create(int? customrid,Card card)
         {
-            var result = await http.PostAsJsonAsync($"api/Cards{customrid}Create", Card);
+            var result = await http.PostAsJsonAsync($"api/Cards/{customrid}/Create", card);
         }
 
         public async Task DeleteConfirmed(int? customrid,int? id)
@@ -35,9 +35,9 @@ namespace BlazerBank.Client.Services.CardServices
             return Card;
         }
 
-        public async Task Edit(int? customrid,int? id, Card Card)
+        public async Task Edit(int? customrid,int? id, Card card)
         {
-            var result = await http.PutAsJsonAsync($"api/Cards/{customrid}/Edit/{id}",Card);
+            var result = await http.PutAsJsonAsync($"api/Cards/{customrid}/Edit/{id}",card);
             Card = await result.Content.ReadFromJsonAsync<Card>();
 
         }
